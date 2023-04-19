@@ -2,6 +2,8 @@ import { defineConfig } from 'dumi';
 import path from 'path';
 
 export default defineConfig({
+  base: '/eyas-design',
+  publicPath: '/eyas-design/',
   outputPath: 'docs-dist',
   conventionRoutes: {
     // to avoid generate routes for .dumi/pages/index/components/xx

@@ -2,6 +2,14 @@
   "name": "eyas-ui",
   "version": "0.0.1",
   "description": "A react library developed with dumi",
+  "keywords": [
+    "design",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "homepage": "https://yingliyu.github.io/fish-ui",
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
