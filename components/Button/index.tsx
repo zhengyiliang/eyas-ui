@@ -15,7 +15,7 @@ function Button(props: ButtonProps, ref) {
     disabled,
     style,
     className,
-    // htmlType = 'button',
+    htmlType = 'button',
     onClick,
     ...rest
   } = props;
@@ -48,9 +48,9 @@ function Button(props: ButtonProps, ref) {
 
   return (
     <button
-      ref={buttonRef}
-      type={'button'}
       {...rest}
+      ref={buttonRef}
+      type={htmlType}
       className={classNames}
       style={style}
       onClick={handleClick}
