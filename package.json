@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "father build && npm run build-css",
+    "build-css": "lessc  ./components/style/index.less ./dist/index.css --clean-css=advanced",
     "build:watch": "father dev",
     "dev": "dumi dev",
     "docs:build": "dumi build",
@@ -56,6 +57,7 @@
     "eslint": "^8.23.0",
     "father": "^4.1.0",
     "husky": "^8.0.1",
+    "lessc": "^1.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
