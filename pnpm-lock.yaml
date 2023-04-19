@@ -6,6 +6,7 @@ specifiers:
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@umijs/lint': ^4.0.0
+  classnames: ^2.3.2
   dumi: ^2.0.2
   eslint: ^8.23.0
   father: ^4.1.0
@@ -17,6 +18,9 @@ specifiers:
   react: ^18.0.0
   react-dom: ^18.0.0
   stylelint: ^14.9.1
+
+dependencies:
+  classnames: registry.npmmirror.com/classnames/2.3.2
 
 devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.4.4
@@ -4446,7 +4450,6 @@ packages:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/classnames/-/classnames-2.3.2.tgz}
     name: classnames
     version: 2.3.2
-    dev: true
 
   registry.npmmirror.com/clean-css/5.3.2:
     resolution: {integrity: sha512-JVJbM+f3d3Q704rF4bqQ5UUyTtuJ0JRKNbTKVEeujCCBoMdkEi+V+e8oktO9qGQNSvHrFTM6JZRXrUvGR1czww==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/clean-css/-/clean-css-5.3.2.tgz}

@@ -4,7 +4,9 @@ import React from 'react';
 export default () => {
   return (
     <>
-      <Button>Button</Button>
+      <Button type="primary">Primary</Button>
+      <Button>Default</Button>
+      <Button type="text">Text</Button>
     </>
   );
 };
