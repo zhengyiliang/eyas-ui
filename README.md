@@ -6,9 +6,9 @@ Eyas UI，是一款基于 Dumi，由 React + TypeScript 开发的个人组件库
 
 </div>
 
-该开源项目是我为进阶 React，同时探索组件库设计开发思路所做的，故不可用于生产环境。由于个人设计能力有限， UI 设计方面会大量参考[Ant Design 组件库](https://ant.design/index-cn)以及[Arco Design 组件库](https://arco.design/react/components/)，同时组件的使用方式也会参照 Ant Design or Arco Design 进行实现。如果你也想学习组件开发，欢迎加入或提供意见，你的 star ⭐，是对我最大的鼓励。
+该开源项目是我为进阶 React，同时探索组件库设计开发思路所做的，故不可用于生产环境。由于个人设计能力有限， UI 设计方面会大量参考[Ant Design 组件库](https://ant.design/index-cn)以及[Arco Design 组件库](https://arco.design/react/components/)，同时组件的使用方式也会参照 `Ant Design` or `Arco Design` 进行实现。如果你也想学习组件开发，欢迎加入或提供意见，你的 star ⭐，是对我最大的鼓励。
 
-## PR 标题与 commit 信息开头请遵循如下规范：
+## commit 规范
 
 - ✨ feat：新功能
 - 🔧 chore：构建过程或辅助工具的变动
