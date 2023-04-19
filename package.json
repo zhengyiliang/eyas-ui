@@ -25,14 +25,16 @@
     "build": "father build && npm run build-css",
     "build-css": "lessc  ./components/style/index.less ./dist/index.css --clean-css=advanced",
     "build:watch": "father dev",
+    "deploy": "npm run docs:build && npm run docs:deploy",
     "dev": "dumi dev",
     "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
-    "prepublishOnly": "father doctor && npm run build",
+    "prepublishOnly": "npm run build",
     "start": "npm run dev"
   },
   "commitlint": {
