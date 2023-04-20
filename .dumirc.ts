@@ -20,7 +20,7 @@ export default defineConfig({
       },
       {
         title: '组件',
-        link: '/components',
+        link: '/components/button',
       },
     ],
   },

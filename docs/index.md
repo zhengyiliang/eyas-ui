@@ -4,7 +4,7 @@ hero:
   description: 🏆 个人开源项目，使用 React + TypeScript 打造自己的 UI 组件库
   actions:
     - text: 开始使用
-      link: /components
+      link: /components/button
     - text: GitHub
       link: /
 features:
