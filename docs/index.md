@@ -6,7 +6,7 @@ hero:
     - text: 开始使用
       link: /components/button
     - text: GitHub
-      link: /
+      link: https://github.com/zhengyiliang/eyas-ui
 features:
   - title: 开箱即用
     emoji: 💎
