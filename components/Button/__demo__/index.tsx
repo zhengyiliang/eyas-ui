@@ -5,7 +5,8 @@ export default () => {
   return (
     <>
       <Button type="primary">Primary</Button>
-      <Button>Default</Button>
+      <Button>Secondary</Button>
+      <Button type="outline">Outline</Button>
       <Button type="text">Text</Button>
     </>
   );

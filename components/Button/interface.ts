@@ -6,7 +6,22 @@ export interface BaseButtonProps {
    *  @description: 类型
    *  @default default
    */
-  type: 'default' | 'primary' | 'text';
+  type?: 'default' | 'secondary' | 'primary' | 'text' | 'outline';
+  /**
+   *  按钮状态
+   * @default default
+   */
+  status?: 'warning' | 'danger' | 'success' | 'default';
+  /**
+   *  按钮的尺寸
+   * @default default
+   */
+  size?: 'mini' | 'small' | 'default' | 'large';
+  /**
+   * 按钮形状，`circle` - 圆形， `round` - 全圆角， `square` - 长方形
+   * @default square
+   */
+  shape?: 'circle' | 'round' | 'square';
   disabled: boolean;
   style: CSSProperties;
   className: string;

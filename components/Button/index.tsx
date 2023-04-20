@@ -27,9 +27,10 @@ function Button(props: ButtonProps, ref: any) {
 
   const prefixCls = getPrefixCls('btn');
 
-  const classNames = cs(prefixCls, {
+  const _type = type === 'default' ? 'secondary' : type;
+
+  const classNames = cs(prefixCls, `${prefixCls}-${_type}`, {
     [className]: className,
-    [`${prefixCls}-${type}`]: type,
     [`${prefixCls}-disabled`]: disabled,
   });
 

@@ -1,3 +1,4 @@
+@import './token.less';
 @btn-prefix-cls: ~'@{prefix}-btn';
 
 .@{btn-prefix-cls} {
@@ -13,71 +14,33 @@
   padding: 0 @spacing-7;
   height: @size-default;
   border: 1px solid transparent;
-  background-color: @color-bg;
   border-radius: @radius-medium;
-
   & + & {
     margin-left: @spacing-7;
   }
 }
 
-.@{btn-prefix-cls}-default {
-  border-color: @gray-5;
+.btn-type(@type) {
+  .@{btn-prefix-cls}-@{type} {
+    border-color: ~'@{btn-@{type}-border-color}';
+    color: ~'@{btn-@{type}-color}';
+    background-color: ~'@{btn-@{type}-bg-color}';
 
-  &:hover {
-    color: @color-primary-6;
-    border-color: @color-primary-6;
-  }
+    &:hover {
+      border-color: ~'@{btn-@{type}-border-color_hover}';
+      color: ~'@{btn-@{type}-color_hover}';
+      background-color: ~'@{btn-@{type}-bg-color_hover}';
+    }
 
-  &:active {
-    color: @color-primary-7;
-    border-color: @color-primary-7;
-  }
-}
-
-.@{btn-prefix-cls}-primary {
-  color: @color-bg;
-  background-color: @color-primary-6;
-
-  &:hover {
-    background-color: @color-primary-5;
-  }
-
-  &:active {
-    background-color: @color-primary-6;
+    &:active {
+      border-color: ~'@{btn-@{type}-border-color_active}';
+      color: ~'@{btn-@{type}-color_active}';
+      background-color: ~'@{btn-@{type}-bg-color_active}';
+    }
   }
 }
 
-.@{btn-prefix-cls}-text {
-  color: @color-primary-6;
-
-  &:hover {
-    color: @color-primary-5;
-  }
-
-  &:active {
-    color: @color-primary-7;
-  }
-}
-.@{btn-prefix-cls}-default.@{btn-prefix-cls}-disabled,
-.@{btn-prefix-cls}-primary.@{btn-prefix-cls}-disabled {
-  cursor: not-allowed;
-  border-color: #d9d9d9;
-  color: rgb(0 0 0 / 25%);
-  background-color: rgb(0 0 0 / 4%);
-  box-shadow: none;
-
-  &:hover {
-    color: rgb(0 0 0 / 25%);
-    background-color: rgb(0 0 0 / 4%);
-  }
-}
-
-.@{btn-prefix-cls}-text.@{btn-prefix-cls}-disabled {
-  cursor: not-allowed;
-  color: rgb(0 0 0 / 25%);
-
-  &:hover {
-    color: rgb(0 0 0 / 25%);
-  }
-}
+.btn-type(secondary);
+.btn-type(primary);
+.btn-type(outline);
+.btn-type(text);
