@@ -6,9 +6,9 @@ import React, {
   useRef,
 } from 'react';
 import { ConfigContext } from '../ConfigProvider';
-import { ButtonProps } from './interface';
+import type { ButtonProps } from './interface';
 
-function Button(props: ButtonProps, ref) {
+function Button(props: ButtonProps, ref: any) {
   const {
     children,
     type = 'default',
@@ -61,5 +61,7 @@ function Button(props: ButtonProps, ref) {
 }
 
 const ButtonComponent = forwardRef<unknown, ButtonProps>(Button);
+
+ButtonComponent.displayName = 'Button';
 
 export default ButtonComponent;

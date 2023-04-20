@@ -2,6 +2,10 @@ import { ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react';
 
 export interface BaseButtonProps {
   children: ReactNode;
+  /**
+   *  @description: 类型
+   *  @default default
+   */
   type: 'default' | 'primary' | 'text';
   disabled: boolean;
   style: CSSProperties;

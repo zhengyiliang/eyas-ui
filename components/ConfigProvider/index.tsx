@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 import type { ConfigProviderProps } from './interface';
 
 const defaultProps: ConfigProviderProps = {
@@ -9,3 +9,10 @@ const defaultProps: ConfigProviderProps = {
 };
 
 export const ConfigContext = createContext<ConfigProviderProps>(defaultProps);
+
+export const ConfigProvider = (props: ConfigProviderProps) => {
+  const { children, ...rest } = props;
+  return (
+    <ConfigContext.Provider value={rest}>{children}</ConfigContext.Provider>
+  );
+};
