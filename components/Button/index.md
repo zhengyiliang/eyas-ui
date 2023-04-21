@@ -16,3 +16,7 @@ group:
 ## 按钮尺寸
 
 <code src="./__demo__/size"></code>
+
+## 按钮禁用
+
+<code src="./__demo__/disabled"></code>

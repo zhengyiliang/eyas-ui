@@ -17,7 +17,7 @@
 }
 
 .btn-type(@type) {
-  .@{btn-prefix-cls}-@{type} {
+  .@{btn-prefix-cls}-@{type}:not(.@{btn-prefix-cls}-disabled) {
     border-color: ~'@{btn-@{type}-border-color}';
     color: ~'@{btn-@{type}-color}';
     background-color: ~'@{btn-@{type}-bg-color}';
@@ -34,10 +34,16 @@
       background-color: ~'@{btn-@{type}-bg-color_active}';
     }
   }
+  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-disabled {
+    background-color: ~'@{btn-@{type}-bg-color_disabled}';
+    color: ~'@{btn-@{type}-color_disabled}';
+    border-color: ~'@{btn-@{type}-border-color_disabled}';
+    cursor: not-allowed;
+  }
 }
 
 .btn-status(@type, @status) {
-  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-@{status} {
+  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-status-@{status} {
     border-color: ~'@{btn-@{type}-border-color_@{status}}';
     color: ~'@{btn-@{type}-color_@{status}}';
     background-color: ~'@{btn-@{type}-bg-color_@{status}}';
@@ -53,6 +59,12 @@
       color: ~'@{btn-@{type}-color_@{status}_active}';
       background-color: ~'@{btn-@{type}-bg-color_@{status}_active}';
     }
+  }
+
+  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-status-@{status}.@{btn-prefix-cls}-disabled {
+    color: ~'@{btn-@{type}-color_@{status}_disabled}';
+    background-color: ~'@{btn-@{type}-bg-color_@{status}_disabled}';
+    border-color: ~'@{btn-@{type}-border-color_@{status}_disabled}';
   }
 }
 

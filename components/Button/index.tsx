@@ -33,7 +33,7 @@ function Button(props: ButtonProps, ref: any) {
 
   const classNames = cs(prefixCls, `${prefixCls}-${_type}`, {
     [className]: className,
-    [`${prefixCls}-${status}`]: status,
+    [`${prefixCls}-status-${status}`]: status,
     [`${prefixCls}-size-${size}`]: size,
     [`${prefixCls}-disabled`]: disabled,
   });
