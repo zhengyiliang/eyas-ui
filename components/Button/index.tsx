@@ -9,18 +9,20 @@ import { ConfigContext } from '../ConfigProvider';
 import type { ButtonProps } from './interface';
 
 function Button(props: ButtonProps, ref: any) {
+  const { getPrefixCls, size: ctxSize } = useContext(ConfigContext);
+
   const {
     children,
     type = 'default',
     disabled,
     style,
     className,
+    status,
     htmlType = 'button',
     onClick,
+    size = ctxSize,
     ...rest
   } = props;
-
-  const { getPrefixCls } = useContext(ConfigContext);
 
   const innerButtonRef = useRef();
   const buttonRef = ref || innerButtonRef;
@@ -31,6 +33,8 @@ function Button(props: ButtonProps, ref: any) {
 
   const classNames = cs(prefixCls, `${prefixCls}-${_type}`, {
     [className]: className,
+    [`${prefixCls}-${status}`]: status,
+    [`${prefixCls}-size-${size}`]: size,
     [`${prefixCls}-disabled`]: disabled,
   });
 
