@@ -23,6 +23,7 @@ function Button(props: ButtonProps, ref: any) {
     onClick,
     loading,
     iconOnly,
+    block,
     shape = 'square',
     size = ctxSize,
     ...rest
@@ -42,6 +43,7 @@ function Button(props: ButtonProps, ref: any) {
     [`${prefixCls}-loading`]: loading,
     [`${prefixCls}-shape-${shape}`]: shape,
     [`${prefixCls}-iconOnly`]: iconOnly,
+    [`${prefixCls}-block`]: block,
   });
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (event: any) => {

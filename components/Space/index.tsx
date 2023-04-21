@@ -29,7 +29,7 @@ function Space(props: SpaceProps, ref: any) {
 
   const _align = align || (direction === 'horizontal' ? 'center' : '');
 
-  const classNames = cs(prefixCls, {
+  const classNames = cs(prefixCls, `${prefixCls}-${direction}`, {
     [`${prefixCls}-align-${_align}`]: _align,
     [`${prefixCls}-wrap`]: wrap,
   });

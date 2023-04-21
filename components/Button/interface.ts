@@ -36,6 +36,11 @@ export interface BaseButtonProps {
    * @default true
    */
   disabled?: boolean;
+  /**
+   * 块级元素
+   * @default false
+   */
+  block?: boolean;
   style: CSSProperties;
   className: string;
   onClick: (e: MouseEvent) => void;

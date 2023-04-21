@@ -28,3 +28,7 @@ group:
 ## 按钮形状
 
 <code src="./__demo__/shape"></code>
+
+## 长按钮
+
+<code src="./__demo__/block"></code>
