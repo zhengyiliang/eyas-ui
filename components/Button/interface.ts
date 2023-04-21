@@ -22,7 +22,20 @@ export interface BaseButtonProps {
    * @default square
    */
   shape?: 'circle' | 'round' | 'square';
-  disabled: boolean;
+  /**
+   * 按钮形状变成正方式
+   */
+  iconOnly?: boolean;
+  /**
+   * 加载状态
+   * @default false
+   */
+  loading?: boolean;
+  /**
+   * 禁用状态
+   * @default true
+   */
+  disabled?: boolean;
   style: CSSProperties;
   className: string;
   onClick: (e: MouseEvent) => void;
@@ -36,4 +49,4 @@ export type FinalButtonProps = {
 } & BaseButtonProps &
   Omit<ButtonHTMLAttributes<any>, 'type' | 'onClick' | 'className'>;
 
-export type ButtonProps = FinalButtonProps;
+export type ButtonProps = Partial<FinalButtonProps>;

@@ -14,6 +14,44 @@
   line-height: @line-height-base;
   border: 1px solid transparent;
   border-radius: @radius-small;
+
+  &-loading {
+    cursor: default;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      z-index: 1;
+      display: block;
+      background: #fff;
+      border-radius: inherit;
+      opacity: 0.4;
+      transition: opacity @transition-duration-1 linear;
+      pointer-events: none;
+    }
+
+    .@{btn-prefix-cls}-loading-icon {
+      animation: rotate 1s linear infinite;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
 }
 
 .btn-type(@type) {
@@ -22,13 +60,13 @@
     color: ~'@{btn-@{type}-color}';
     background-color: ~'@{btn-@{type}-bg-color}';
 
-    &:hover {
+    &:not(.@{btn-prefix-cls}-loading):hover {
       border-color: ~'@{btn-@{type}-border-color_hover}';
       color: ~'@{btn-@{type}-color_hover}';
       background-color: ~'@{btn-@{type}-bg-color_hover}';
     }
 
-    &:active {
+    &:not(.@{btn-prefix-cls}-loading):active {
       border-color: ~'@{btn-@{type}-border-color_active}';
       color: ~'@{btn-@{type}-color_active}';
       background-color: ~'@{btn-@{type}-bg-color_active}';
@@ -43,18 +81,20 @@
 }
 
 .btn-status(@type, @status) {
-  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-status-@{status} {
+  .@{btn-prefix-cls}-@{type}.@{btn-prefix-cls}-status-@{status}:not(
+      .@{btn-prefix-cls}-disabled
+    ) {
     border-color: ~'@{btn-@{type}-border-color_@{status}}';
     color: ~'@{btn-@{type}-color_@{status}}';
     background-color: ~'@{btn-@{type}-bg-color_@{status}}';
 
-    &:hover {
+    &:not(.@{btn-prefix-cls}-loading):hover {
       border-color: ~'@{btn-@{type}-border-color_@{status}_hover}';
       color: ~'@{btn-@{type}-color_@{status}_hover}';
       background-color: ~'@{btn-@{type}-bg-color_@{status}_hover}';
     }
 
-    &:active {
+    &:not(.@{btn-prefix-cls}-loading):active {
       border-color: ~'@{btn-@{type}-border-color_@{status}_active}';
       color: ~'@{btn-@{type}-color_@{status}_active}';
       background-color: ~'@{btn-@{type}-bg-color_@{status}_active}';
@@ -73,6 +113,22 @@
     height: ~'@{btn-size-@{size}-height}';
     font-size: ~'@{btn-size-@{size}-font-size}';
     padding: 0 ~'@{btn-size-@{size}-padding-horizontal}';
+  }
+  .@{btn-prefix-cls}-size-@{size}.@{btn-prefix-cls}-iconOnly,
+  .@{btn-prefix-cls}-size-@{size}.@{btn-prefix-cls}-shape-circle {
+    width: ~'@{size-@{size}}';
+    height: ~'@{size-@{size}}';
+    padding: 0;
+    text-align: center;
+    border-radius: @radius-circle;
+  }
+
+  .@{btn-prefix-cls}-size-@{size}.@{btn-prefix-cls}-iconOnly {
+    border-radius: @radius-small;
+  }
+
+  .@{btn-prefix-cls}-size-@{size}.@{btn-prefix-cls}-shape-round {
+    border-radius: calc(~'@{size-@{size}}' * 0.5);
   }
 }
 

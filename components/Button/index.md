@@ -20,3 +20,11 @@ group:
 ## 按钮禁用
 
 <code src="./__demo__/disabled"></code>
+
+## 加载状态
+
+<code src="./__demo__/loading"></code>
+
+## 按钮形状
+
+<code src="./__demo__/shape"></code>

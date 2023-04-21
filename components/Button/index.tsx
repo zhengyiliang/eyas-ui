@@ -1,3 +1,4 @@
+import { Loading3QuartersOutlined } from '@ant-design/icons';
 import cs from 'classnames';
 import React, {
   forwardRef,
@@ -20,6 +21,9 @@ function Button(props: ButtonProps, ref: any) {
     status,
     htmlType = 'button',
     onClick,
+    loading,
+    iconOnly,
+    shape = 'square',
     size = ctxSize,
     ...rest
   } = props;
@@ -31,15 +35,17 @@ function Button(props: ButtonProps, ref: any) {
 
   const _type = type === 'default' ? 'secondary' : type;
 
-  const classNames = cs(prefixCls, `${prefixCls}-${_type}`, {
-    [className]: className,
+  const classNames = cs(className, prefixCls, `${prefixCls}-${_type}`, {
     [`${prefixCls}-status-${status}`]: status,
     [`${prefixCls}-size-${size}`]: size,
     [`${prefixCls}-disabled`]: disabled,
+    [`${prefixCls}-loading`]: loading,
+    [`${prefixCls}-shape-${shape}`]: shape,
+    [`${prefixCls}-iconOnly`]: iconOnly,
   });
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (event: any) => {
-    if (disabled) {
+    if (loading) {
       if (typeof event?.preventDefault === 'function') {
         event.preventDefault();
       }
@@ -58,8 +64,15 @@ function Button(props: ButtonProps, ref: any) {
       type={htmlType}
       className={classNames}
       style={style}
+      disabled={disabled}
       onClick={handleClick}
     >
+      {loading && (
+        <>
+          <Loading3QuartersOutlined className={`${prefixCls}-loading-icon`} />
+          &nbsp;
+        </>
+      )}
       {children}
     </button>
   );
