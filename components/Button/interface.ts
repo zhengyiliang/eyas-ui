@@ -6,7 +6,7 @@ export interface BaseButtonProps {
    *  @description: 类型
    *  @default default
    */
-  type?: 'default' | 'secondary' | 'primary' | 'text' | 'outline';
+  type?: 'default' | 'secondary' | 'primary' | 'text' | 'outline' | 'link';
   /**
    *  按钮状态
    * @default default

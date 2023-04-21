@@ -8,6 +8,7 @@ export default () => {
       <Button>Secondary</Button>
       <Button type="outline">Outline</Button>
       <Button type="text">Text</Button>
+      <Button type="link">Link</Button>
     </Space>
   );
 };
