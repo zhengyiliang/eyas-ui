@@ -72,6 +72,8 @@ import 'eyas-ui/dist/index.css';
 - [x] CSS 样式解决方案、初始化文件结构、UI 设计
 - [x] 创建入口文件，并发布到 npm
 - [x] 开发 Button 组件
+- [x] 开发 Space 组件
+- [x] 开发 Radio 组件
 
 ## 开源协议
 

@@ -18,6 +18,7 @@ function Space(props: SpaceProps, ref: any) {
     split,
     direction = 'horizontal',
     wrap,
+    className,
     ...rest
   } = props;
 
@@ -29,7 +30,7 @@ function Space(props: SpaceProps, ref: any) {
 
   const _align = align || (direction === 'horizontal' ? 'center' : '');
 
-  const classNames = cs(prefixCls, `${prefixCls}-${direction}`, {
+  const classNames = cs(prefixCls, className, `${prefixCls}-${direction}`, {
     [`${prefixCls}-align-${_align}`]: _align,
     [`${prefixCls}-wrap`]: wrap,
   });
