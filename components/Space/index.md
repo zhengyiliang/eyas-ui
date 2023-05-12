@@ -18,7 +18,7 @@ group:
 | direction | 间距方向 | 'vertical' \| 'horizontal' | `horizontal` |
 | split | 设置分隔符 | ReactNode | `-` |
 | className | 节点类名 | string \| string[] | `-` |
-| size | 尺寸。 | [SpaceSize](#spacesize) \| [SpaceSize](#spacesize)[] | `small` |
+| size | 尺寸。 | [SpaceSize](#spacesize) \| [SpaceSize[]](#spacesize) | `small` |
 | style | 节点样式 | CSSProperties | `-` |
 
 ## SpaceSize
