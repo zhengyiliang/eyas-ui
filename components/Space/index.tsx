@@ -36,7 +36,7 @@ function Space(props: SpaceProps, ref: any) {
   });
 
   const getMargin = (size: SpaceSize) => {
-    if (Object.prototype.toString.call(size) === '[Object, Number]') {
+    if (Object.prototype.toString.call(size) === '[object Number]') {
       return size;
     }
     return SIZE_MAP[size];
@@ -54,6 +54,7 @@ function Space(props: SpaceProps, ref: any) {
     };
     if (['string', 'number'].includes(typeof size)) {
       const space = getMargin(size as SpaceSize);
+
       marginStyle = {
         marginRight: space,
         marginBottom: space,

@@ -16,6 +16,7 @@ export default () => {
           Large
         </Button>
       </Space>
+      <br />
       <Space size="large">
         <Button type="primary" size="mini" status="danger">
           Mini
